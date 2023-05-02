@@ -1,0 +1,603 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-top: 20px
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul {
+    display: inline-block;
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+#nav-logo{
+    padding-left: 5px;
+}
+a {
+    text-decoration: none;
+    color: #555;
+}
+
+p {
+    color: #555;
+}
+
+.conatiner {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    /* The space in left and right of each iteam will be equal. */
+    justify-content: space-around;
+}
+
+.col2 {
+    /* Both Col will take 50% space */
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.col2 img {
+    max-width: 100%;
+    padding: 50px 0;
+}
+
+.col2 h1 {
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+}
+
+.button {
+    display: inline-block;
+    background: #ff523b;
+    color: #fff;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.5s;
+}
+
+.header {
+    /* Linear gradient creates a color transition from one side of the element to the other in a straight line. It can be vertical, horizontal or diagonal depending on the direction specified.
+
+    On the other hand, radial gradient creates a color transition from the center of the element outward in a circular or elliptical shape. The color transition can be smooth or abrupt depending on the shape and size of the gradient. */
+    background: radial-gradient(#fff, #ffd6d6);
+}
+
+/* .header .row{
+    margin-top: 70px;
+}  */
+
+.button:hover{
+    background: #563434;
+}
+
+/* -------------------------Featured Categories---------------------------*/
+.categories{
+    margin: 70px 0;
+}
+.col-3{
+    /* All the columns will take 30% (Equal) space */
+    flex-basis: 30%;
+    min-width: 250px;
+    margin-bottom: 30px;
+}
+.col-3 img{
+    width: 100%;
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+/* -------------------------Featured Products---------------------------*/
+.col-4{
+    /* All 4 cols will take equal space */
+    flex-basis: 25%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-4 img{
+    width: 100%;
+}
+.title{
+    text-align: center;
+    /* So this CSS code will center an element horizontally within its parent container and leave a margin of 0 at the top, and a margin of 80 pixels at the bottom.
+    margin: top right bottom left; */
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: #555;
+}
+.title::after{
+    content: '';
+    background: #ff523b;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    /* Below code will make that line at the bottom of the text */
+    bottom: 0;
+
+    /* Setting left: 50%; moves the element's left edge to the center of its containing element. However, this alone does not perfectly center the element because the element's width is not taken into account.
+
+    To solve this, we use transform: translateX(-50%);. 
+    This CSS property moves the element horizontally along the x-axis by 50% of its own width in the opposite direction of its parent container.
+    
+    In other words, it moves the element to the left by half of its own width, which perfectly centers the element horizontally within its containing element.
+
+    So, using both left: 50%; and transform: translateX(-50%); in combination ensures that an element is centered horizontally within its containing element regardless of the width of the element. */
+
+    left: 50%;
+    transform: translateX(-50%);
+}
+h4{
+    color: #555;
+    /* font-weight: normal; is a CSS property that sets the weight of the text in an element to the normal (or regular) weight. */
+    font-weight: normal;
+}
+.col-4 p{
+    font-size: 14px;
+}
+/* Changing the color of star */
+.rating .fa{
+    color: #ff523b;
+}
+.col-4:hover{
+    transform: translateY(-5px);
+}
+
+/* ---------------------------------Offer--------------------------------*/
+.offer{
+    background: radial-gradient(#fff, #ffd6d6);
+    margin-top: 80px;
+    padding: 30px 0;
+}
+
+.col2 .offer-img{
+    padding: 50px;
+}
+small{
+    color: #555;
+}
+
+/* -----------------------------------testimonial------------------------- */
+.testimonials{
+    padding-top: 100px;
+}
+.testimonials .col-3{
+    text-align: center;
+    padding: 40px 20px;
+
+    /* The box-shadow property takes four or five values:
+
+    The horizontal offset of the shadow (in this case, 0 means no horizontal offset)
+
+    The vertical offset of the shadow (in this case, 0 means no vertical offset)
+    The blur radius of the shadow (in this case, 20px means a blur radius of 20 pixels)
+
+    The spread radius of the shadow (in this case, 0px means the shadow has the same size as the element)
+
+    An optional fifth value to specify the color of the shadow (in this case, rgba(0, 0, 0, 0.1) means a black shadow with 10% opacity)
+    
+    So, box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1); creates a black shadow with a blur radius of 20 pixels, with no horizontal or vertical offset, and no spread radius, and an opacity of 10%. */
+
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonials .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.testimonials .col-3:hover{
+    transform: translateY(-10px);
+}
+.fa.fa-quote-left{
+    font-size: 34px;
+    color: #ff523b;
+}
+.col-3 p{
+    font-size: 15px;
+    margin: 12px 0;
+    color: #777;
+}
+.testimonials .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+
+/* ----------------------------------Brands--------------------------------- */
+
+.brans{
+    margin: 100px auto;
+}
+.col-5{
+    width: 160px;
+}
+.col-5 img{
+    width: 100%;
+    cursor: pointer;
+    /* Below code will change the colour of the brand logos */
+    filter: grayscale(100%);
+}
+.col-5 img:hover{
+    filter: grayscale(0);
+}
+
+/* -----------------------------------Footer------------------------- */
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    /* padding: top right bottom left; 
+    We have not given the value of left so value of left will be equal to right*/
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-col-1{
+    flex-basis: 30%;
+}
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+/* To remove bullet points */
+ul{
+    list-style-type: none;
+}
+.app-logo{
+    margin-top: 20px;
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+.Copy-right{
+    text-align: center;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    /* To hide menu icon */
+    display: none;
+}
+
+/* ----------------------------------All Products---------------------------------- */
+.row-2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+select{
+    border: 1px solid #ff523b;
+    padding: 5px;
+}
+
+/* Below code is to make the border of the dropdown menue always orange */
+/* Previously it would turned black if i click on it  */
+
+/* :focus is a pseudo-class selector in CSS that is used to select and apply styles to an element when it is currently in focus. An element is considered "in focus" when the user clicks on it or navigates to it using the keyboard (e.g. by pressing the "Tab" key). */
+
+select:focus{
+    outline: none;
+}
+
+.page-btn{
+    margin: 0 auto 80px;
+}
+.page-btn span{
+    display: inline-block;
+    border: 1px solid #ff523b;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+
+.page-btn span:hover{
+    background: #ff523b;
+    color: white;
+}
+
+/* -------------------------Single Product Details-------------------------------- */
+.single-product{
+    margin-top: 80px;
+
+}
+
+.single-product .col2 img{
+    padding: 0;
+}
+.single-product .col2{
+    padding: 20px;
+}
+.single-product h4{
+    margin: 20px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.single-product select{
+   display: block;
+   padding: 10px;
+   margin-top: 20px;
+}
+.single-product input{
+   width: 50px;
+   height: 40px;
+   padding-left: 10px;
+   font-size: 20px;
+   margin-right: 10px;
+   border: 1px solid #ff523b;
+}
+
+input:focus{
+    outline: none;
+}
+.single-product .fa{
+    color: #ff523b;
+    margin-left: 10px;
+}
+.small-img-row{
+    display: flex;
+    /* In CSS, "space between" is a value for the justify-content property of a flex container. It specifies that the space between the flex items should be evenly distributed, with extra space added both before the first item and after the last item.*/
+    justify-content: space-between;
+}
+.small-img-col{
+    /* All the 4 images will take 24% space respectively and a gap of 1% */
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+/* -------------------------Cart Items Details-------------- */
+.cart-page{
+    margin: 80px auto;
+}
+.cart-page table{
+    width: 100%;
+
+    /* border-collapse: collapse;" is a CSS property that is used to specify whether the borders of adjacent table cells should be collapsed into a single border or should be separated as individual borders.
+
+    When this property is set to "collapse," the borders of adjacent table cells are merged into a single border, while when it is set to "separate," each cell has its own border. */
+
+    border-collapse: collapse;
+
+}
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: #ff523b;
+    font-weight: normal;
+}
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid black;
+}
+td a{
+    color: #ff523b;
+    font-size: 12px ;
+}
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+.total-price table{
+    border-top:3px solid #ff523b ;
+    width: 100%;
+    max-width: 400px;
+}
+td:last-child{
+    text-align: right;
+}
+th:last-child{
+    text-align: right;
+}
+/* --------------------------Account- Page------------------------ */
+
+.account-page{
+    padding: 50px 0;
+    background: radial-gradient(#fff, #ffd6d6);
+}
+.form-conatiner{
+    text-align: center;
+    background: #fff;
+    width: 300px;
+    height: 400px;
+    position: relative;
+    padding: 20px 0;
+    margin: auto;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    /* To hide the form content going beyond the form */
+    overflow: hidden;
+}
+.form-conatiner span{
+    font-weight: bold;
+    padding: 0 10px;
+    cursor: pointer;
+    width: 100px;
+    display: inline-block;
+}
+.form-btn{
+    display: inline-block;
+}
+.form-conatiner form{
+    max-width: 300px;
+    padding: 0 20px;
+    /* So that its content will not go beyond form-conatiner. Because its position is relative  */
+    position: absolute;
+    top: 130px;
+    transition: transform 1s;
+}
+form input{
+    width: 100%;
+    height: 30px;
+    margin: 10px 0;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+form .button{
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+form .btn:focus{
+    outline: none;
+}
+
+#login-form{
+    left: -300px;
+}
+#reg-form{
+    left: 0;
+}
+form a{
+    font-size: 12px;
+}
+#indicator{
+    width: 100px;
+    border: none;
+    background: #ff523b;
+    height: 3px;
+    margin-top: 8px;
+    transform: translateX(100px);
+    transition: transform 1s;
+}
+
+/* ---------------------------Media Query for menu---------------------*/
+@media only screen and (max-width : 800px)
+{
+    nav ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        
+        /* Ul will be hidden and it will be shown when we will click it */
+
+        /* However, since the ul element has a height of 0 (See In script in HTML) and the overflow property is set to hidden, none of its contents will be visible until the max-height property is set to a value greater than 0 through the addition of a CSS class or manipulation with JavaScript. */
+
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    #nav-logo{
+        padding-left: 0px;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul a{
+        color: #fff;
+    }
+    .menu-icon{
+        /* To make it visible */
+        display: block;
+    }
+    .row{
+        text-align: center;
+    }
+
+    .col2, .col-3, .col-4{
+        flex-basis: 100%;
+    }
+    
+    .single-product .row{
+        text-align: left;
+    }
+    .single-product .col2{
+        padding: 20px 0;
+    }
+
+    .single-product h1{
+        font-size: 20px;
+        line-height: 32px;
+    }
+    /* To hide product name */
+    .cart-info p{
+        display: none;
+    }
+}
+
+/* -----------------------Media Query for less than 600px---------------------*/
+@media only screen and (max-width : 600px){
+   
+
+   
+}
